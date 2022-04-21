@@ -13,6 +13,12 @@ def maximo_encadenado(a: float, b: float, c: float) -> float:
 
     Referencia: https://docs.python.org/3/reference/expressions.html#comparisons # noqa: E501
     """
+    valores = [a, b, c]
+    mayor = 0
+    for x in valores:
+        if mayor < x:
+            mayor = x
+    return mayor
 
 
 # NO MODIFICAR - INICIO
@@ -37,6 +43,7 @@ def maximo_cuadruple(a: float, b: float, c: float, d: float) -> float:
     """Re-escribir para que tome 4 parámetros, utilizar la función max.
 
     Referencia: https://docs.python.org/3/library/functions.html#max"""
+    return max(a, b, c, d)
 
 
 # NO MODIFICAR - INICIO
@@ -54,6 +61,11 @@ def maximo_arbitrario(*args) -> float:
     """Re-escribir para que tome una cantidad arbitraria de parámetros.
     Referencia: https://docs.python.org/3/tutorial/controlflow.html#arbitrary-argument-lists # noqa: E501
     """
+    mayor = 0
+    for x in args:
+        if mayor < x:
+            mayor = x
+    return mayor
 
 
 # NO MODIFICAR - INICIO
