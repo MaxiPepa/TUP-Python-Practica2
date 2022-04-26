@@ -22,7 +22,10 @@ def combinar_basico(nombres: List[str], precios: List[float]) -> Tuple[Any]:
         - Utilizar la función range.
         - Utilizar índices.
     """
-
+    respuesta = []
+    for x in range(len(nombres)):
+        respuesta.append((nombres[x], precios[x]))
+    return tuple(respuesta)
 
 # NO MODIFICAR - INICIO
 respuesta = (
@@ -46,11 +49,16 @@ def combinar_enumerate(nombres: List[str], precios: List[float], ids: List[int])
 
     Restricción:
         - Utilizar un bucle FOR.
-        - No Utilizar la función range.
+        - No Utilizar la función range.                                                                                             NO ENTIENDO
         - No Utilizar la función zip.
 
     Referencia: https://docs.python.org/3/library/functions.html#enumerate
     """
+    respuesta = []
+    for index in enumerate(nombres):
+        respuesta.append((nombres[index], precios[index], ids[index]))
+    return tuple(respuesta)
+    # no context
 
 
 # NO MODIFICAR - INICIO
@@ -80,7 +88,10 @@ def combinar_zip(nombres: List[str], precios: List[float], ids: List[int]) -> Tu
         - No utilizar índices.
     Referencia: https://docs.python.org/3/library/functions.html#zip
     """
-
+    respuesta = []
+    for nombre, precio, id in zip(nombres, precios, ids):
+        respuesta.append((nombre, precio, id))
+    return tuple(respuesta)
 
 # NO MODIFICAR - INICIO
 respuesta = (
@@ -106,12 +117,16 @@ def combinar_zip_args(*args) -> Tuple[Any]:
 
     Restricción:
         - Utilizar un bucle FOR.
-        - No utilizar la función range.
+        - No utilizar la función range.                                                                                       NO ENTIENDO
         - No utilizar la función enumerate.
         - No utilizar índices.
 
     Referencia: https://docs.python.org/3/tutorial/controlflow.html#unpacking-argument-lists  # noqa: E501
     """
+    respuesta = []
+    for x in zip(args):
+        respuesta.append(x)
+    return tuple(respuesta)
 
 
 # NO MODIFICAR - INICIO
