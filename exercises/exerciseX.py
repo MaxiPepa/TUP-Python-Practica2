@@ -11,6 +11,13 @@ def maximo_recursivo(*args) -> float:
         - No utilizar la ninguna otra función salvo maximo_recursivo
         - Resolver de manera recursiva
     """
+    lista = list(args)
+    if len(lista) == 1:
+        return  lista[0]
+    aux = lista.pop(0)
+    if aux > maximo_recursivo(lista):
+        return aux
+    return maximo_recursivo(lista)
 
 
 # NO MODIFICAR - INICIO

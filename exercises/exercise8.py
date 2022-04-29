@@ -49,14 +49,14 @@ def combinar_enumerate(nombres: List[str], precios: List[float], ids: List[int])
 
     Restricción:
         - Utilizar un bucle FOR.
-        - No Utilizar la función range.                                                                                             NO ENTIENDO
+        - No Utilizar la función range.
         - No Utilizar la función zip.
 
     Referencia: https://docs.python.org/3/library/functions.html#enumerate
     """
     respuesta = []
-    for index in enumerate(nombres):
-        respuesta.append((nombres[index], precios[index], ids[index]))
+    for index, nombre in enumerate(nombres):
+        respuesta.append((nombre, precios[index], ids[index]))
     return tuple(respuesta)
     # no context
 
@@ -124,9 +124,10 @@ def combinar_zip_args(*args) -> Tuple[Any]:
     Referencia: https://docs.python.org/3/tutorial/controlflow.html#unpacking-argument-lists  # noqa: E501
     """
     respuesta = []
-    for x in zip(args):
-        respuesta.append(x)
-    return tuple(respuesta)
+    for nombre in zip(args):
+        print(nombre)
+        print("---")
+    return tuple(respuesta)    
 
 
 # NO MODIFICAR - INICIO
